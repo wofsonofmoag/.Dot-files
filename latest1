@@ -1,0 +1,51 @@
+!# bin/bash
+
+# a usful distrohopping setup
+# do this as set up for a brand new system also
+echo this is part 1
+sudo apt install nala && sudo apt install exa
+sudo nala neofetch
+nala fetch
+# choose 1 2 3 4 fastest
+sudo nala update && sudo nala dist-upgrade -y
+# Stacer
+echo 'Stacer Linux Disk Cleaner'
+sudo nala install stacer
+# Clamav Antivirus
+echo 'ClamAV AntiVirus'
+echo 'https://www.clamav.net/downloads/production/clamav-1.3.0.linux.x86_64.deb'
+# flatseal
+echo 'Flatseal'
+sudo apt install flatpak
+# firetools
+echo 'Firetools'
+sudo apt install firetools
+# portmaster
+echo'portmaster'
+curl -fsSL https://updates.safing.io/latest/linux_all/packages/install.sh | sudo bash
+echo ' this will say that you need to restart your system to use portmaster. Please do not do this the system will restat in a moment anywy.'
+# Obfuscate
+echo 'Obfuscate'
+flatpak install flathub com.belmoussaoui.Obfuscate
+
+echo 'this section will need some interaction. Input your sudo password when asked.'
+# installing GIMP
+echo 'Installing GIMP for Gifs and pictures'
+sudo nala install gimp -y
+# installing Vivaldi
+echo 'Installing Vivaldi Browser for web browsing.'
+sudo nala install vivaldi -y
+echo ' the following are flatpacks.'
+flatpak install flathub com.endlessnetwork.dragonsapprentice
+flatpak install flathub com.moddb.TotalChaos
+flatpak install flathub com.play0ad.zeroad
+flatpak install flathub io.github.parnassius.SysDVR-Qt
+flatpak install flathub net.wz2100.wz2100
+#Graphics/Photography
+flatpak install flathub com.sweethome3d.Sweethome3d
+flatpak install flathub org.flameshot.Flameshot
+flatpak install flathub org.gimp.GIMP
+#update
+echo 'updateing system. when finished this will reboot system.'
+sudo nala update && sudo nala upgrade -y
+sudo reboot -f
