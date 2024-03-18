@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# a usful distrohopping setup
+# do this as set up for a brand new system also
+echo this is part 2
+
+# dev tools
+echo more flatpacks
+flatpak install flathub nl.openoffice.bluefish
+flatpak install flathub io.github.shiftey.Desktop
+flatpak install flathub com.visualstudio.code
+flatpak install flathub com.jetbrains.PyCharm-Professional
+
+# Prodoctivy apps
+echo 'productivity apps'
+flatpak install flathub com.calibre_ebook.calibre
+flatpak install flathub com.todoist.Todoist
+flatpak install flathub md.obsidian.Obsidian
+flatpak install flathub org.kde.itinerary
+
+# Configure system settings
+# go to https://github.com/TheAssassin/AppImageLauncher and get the coorrect version for today
+echo 'go to https://github.com/TheAssassin/AppImageLauncher and get the coorrect version for today'
+# Obsidian
+echo 'goto https://obsidian.md/download'
+# cmatrix
+echo 'cmatrix install'
+sudo nala install cmatrix
+
+# Example: Set up custom keyboard shortcuts
+# xfconf-query -c xfce4-keyboard-shortcuts -p '/commands/custom/<Primary><Alt>t' -n -t string -s 'xfce4-terminal'
+
+# Install additional software
+# Example: Install Google Chrome
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#sudo dpkg -i google-chrome-stable_current_amd64.deb
+#sudo apt install -f
+
+# Customize desktop environment
+# Example: Change wallpaper
+#xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s /path/to/custom/wallpaper.jpg
+
+# Clean up unnecessary packages
+sudo apt autoremove --purge
+
+echo "Setup script completed successfully."
